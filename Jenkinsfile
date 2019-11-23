@@ -88,7 +88,7 @@ pipeline {
                             //    admin1cPwd,
                              //   sqluser,
                              //   sqlPwd
-                            )
+                            //)
                             // 2. Делаем sql бекап эталонной базы, которую будем загружать в тестовую базу
                             backupTasks["backupTask_${templateDb}"] = backupTask(
                                 serverSql, 
