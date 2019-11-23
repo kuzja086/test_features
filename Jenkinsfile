@@ -79,16 +79,16 @@ pipeline {
                             backupPath = "${env.WORKSPACE}/build/temp_${templateDb}_${utils.currentDateStamp()}"
 
                             // 1. Удаляем тестовую базу из кластера (если он там была) и очищаем клиентский кеш 1с
-                           // dropDbTasks["dropDbTask_${testbase}"] = dropDbTask(
-                            //    server1c, 
-                            //    server1cPort, 
-                            //    serverSql, 
-                            //    testbase, 
-                            //    admin1cUser, 
-                            //    admin1cPwd,
-                             //   sqluser,
-                             //   sqlPwd
-                            //)
+                            dropDbTasks["dropDbTask_${testbase}"] = dropDbTask(
+                                server1c, 
+                                server1cPort, 
+                                serverSql, 
+                                testbase, 
+                                admin1cUser, 
+                               admin1cPwd,
+                                sqluser,
+                                sqlPwd
+                            )
                             // 2. Делаем sql бекап эталонной базы, которую будем загружать в тестовую базу
                             backupTasks["backupTask_${templateDb}"] = backupTask(
                                 serverSql, 
