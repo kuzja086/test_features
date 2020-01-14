@@ -30,6 +30,7 @@ pipeline {
         string(defaultValue: "${env.storages1cPath}", description: 'Необязательный. Пути к хранилищам 1С для обновления копий баз тестирования через запятую. Число хранилищ (если указаны), должно соответствовать числу баз тестирования. Например D:/temp/storage1c/erp,D:/temp/storage1c/upp', name: 'storages1cPath')
         string(defaultValue: "${env.storageUser}", description: 'Необязательный. Администратор хранилищ  1C. Должен быть одинаковым для всех хранилищ', name: 'storageUser')
         string(defaultValue: "${env.storagePwd}", description: 'Необязательный. Пароль администратора хранилищ 1c', name: 'storagePwd')
+		string((defaultValue: "${env.temppath}", description: 'Обязательный. Путь для сохранения временных файлов', name: 'temppath')
     }
 
     agent {
@@ -76,7 +77,7 @@ pipeline {
                             storage1cPath = storages1cPathList[i]
                             testbase = "test_${templateDb}"
                             testbaseConnString = projectHelpers.getConnString(server1c, testbase, agent1cPort)
-                            backupPath = "C:/temp/temp_${templateDb}_${utils.currentDateStamp()}"
+                            backupPath = "${temppath}/temp_${templateDb}_${utils.currentDateStamp()}"
 
                             // 1. Удаляем тестовую базу из кластера (если он там была) и очищаем клиентский кеш 1с
                             dropDbTasks["dropDbTask_${testbase}"] = dropDbTask(
@@ -245,6 +246,13 @@ def restoreTask(serverSql, infobase, backupPath, sqlUser, sqlPwd) {
 
                 sqlUtils.createEmptyDb(serverSql, infobase, sqlUser, sqlPwd)
                 sqlUtils.restoreDb(serverSql, infobase, backupPath, sqlUser, sqlPwd)
+				
+				 utils = new Utils()
+
+				returnCode = utils.cmd("oscript one_script_tools/deleteFile.os -file ${backupPath}")
+				if (returnCode != 0) {
+					utils.raiseError("Возникла ошибка при удалении файла ${backupPath}")
+				}
             }
         }
     }
