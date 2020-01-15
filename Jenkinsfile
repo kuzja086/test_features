@@ -58,6 +58,7 @@ pipeline {
                         agent1cPort = agent1cPort.isEmpty() ? "1541" : agent1cPort
                         env.sqlUser = sqlUser.isEmpty() ? "sa" : sqlUser
                         testbase = null
+						temppath = temppath.isEmpty() ? "C:\temp" : temppath
 
                         // создаем пустые каталоги
                         dir ('build') {
