@@ -2,8 +2,8 @@
 "ИмяСборки": "first",
 "СценарийНаименование": "тестовый сценарий",
 "НастройкиСценарияНаименование": "first",
-"КаталогФич": "C:\\Temp\\features\\Result\\УНФ\\first.feature",
-"КаталогПроекта": "C:\\Temp\\features\\Result\\УНФ\\000000001\\",
+"КаталогФич": "U:\\Козинский\\Git\\erp_features\\erp_features\\features\\УНФ\\first.feature",
+"КаталогПроекта": "U:\\Козинский\\Git\\erp_features\\erp_features\\features\\УНФ\\000000001\\",
 "КаталогиБиблиотек": [
 "\\features\\Libraries"
 ],
@@ -47,7 +47,7 @@
 {
 "Имя": "Администратор",
 "ПутьКИнфобазе": "File=\"\";",
-"ДопПараметры": "/N\"Администратор\" /P\"\"  /AllowExecuteScheduledJobs -Off  /DisableStartupMessages ",
+"ДопПараметры": "/N\"Администратор\" /P\"1\"  /AllowExecuteScheduledJobs -Off  /DisableStartupMessages ",
 "ТипКлиента": "Тонкий",
 "ИмяКомпьютера": "localhost",
 "ПортЗапускаТестКлиента": "48000"
