@@ -77,6 +77,7 @@ pipeline {
                             templateDb = templatebasesList[i]
                             storage1cPath = storages1cPathList[i]
                             testbase = "test_${templateDb}"
+							templateDbConnString = projectHelpers.getConnString(server1c, templateDb, agent1cPort)
                             testbaseConnString = projectHelpers.getConnString(server1c, testbase, agent1cPort)
                             backupPath = "${temppath}/temp_${templateDb}_${utils.currentDateStamp()}"
 
@@ -87,11 +88,22 @@ pipeline {
                                 serverSql, 
                                 testbase, 
                                 admin1cUser, 
-                               admin1cPwd,
+                                admin1cPwd,
                                 sqluser,
                                 sqlPwd
                             )
-                            // 2. Делаем sql бекап эталонной базы, которую будем загружать в тестовую базу
+							// 2. Обновляем Эталонную базу из хранилища 1С (если применимо)
+                            updateDbTasks["updateTask_${templateDb}"] = updateDbTask(
+                                platform1c,
+                                templateDb, 
+                                storage1cPath, 
+                                storageUser, 
+                                storagePwd, 
+                                templateDbConnString, 
+                                admin1cUser, 
+                                admin1cPwd
+                            )
+                            // 3. Делаем sql бекап эталонной базы, которую будем загружать в тестовую базу
                             backupTasks["backupTask_${templateDb}"] = backupTask(
                                 serverSql, 
                                 templateDb, 
@@ -99,7 +111,7 @@ pipeline {
                                 sqlUser,
                                 sqlPwd
                             )
-                            // 3. Загружаем sql бекап эталонной базы в тестовую
+                            // 4. Загружаем sql бекап эталонной базы в тестовую
                             restoreTasks["restoreTask_${testbase}"] = restoreTask(
                                 serverSql, 
                                 testbase, 
@@ -107,7 +119,7 @@ pipeline {
                                 sqlUser,
                                 sqlPwd
                             )
-                            // 4. Создаем тестовую базу кластере 1С
+                            // 5. Создаем тестовую базу кластере 1С
                             createDbTasks["createDbTask_${testbase}"] = createDbTask(
                                 "${server1c}:${agent1cPort}",
                                 serverSql,
@@ -116,7 +128,7 @@ pipeline {
 								sqlUser,
                                 sqlPwd
                             )
-                            // 5. Обновляем тестовую базу из хранилища 1С (если применимо)
+                            // 6. Обновляем тестовую базу из хранилища 1С (если применимо)
                             updateDbTasks["updateTask_${testbase}"] = updateDbTask(
                                 platform1c,
                                 testbase, 
@@ -127,7 +139,7 @@ pipeline {
                                 admin1cUser, 
                                 admin1cPwd
                             )
-                            // 6. Запускаем внешнюю обработку 1С, которая очищает базу от всплывающего окна с тем, что база перемещена при старте 1С
+                            // 7. Запускаем внешнюю обработку 1С, которая очищает базу от всплывающего окна с тем, что база перемещена при старте 1С
                             runHandlers1cTasks["runHandlers1cTask_${testbase}"] = runHandlers1cTask(
                                 testbase, 
                                 admin1cUser, 
