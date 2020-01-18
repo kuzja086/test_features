@@ -138,10 +138,10 @@ pipeline {
                         }
 
                         parallel dropDbTasks
+						parallel updateDbTasks
                         parallel backupTasks
                         parallel restoreTasks
                         parallel createDbTasks
-                        parallel updateDbTasks
                         parallel runHandlers1cTasks
                     }
                 }
