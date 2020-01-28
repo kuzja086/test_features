@@ -3,7 +3,7 @@
     "ЗавершитьРаботуСистемы": true,
     "ВыводитьСообщенияВФайл": "$workspaceRoot/build/out/vb.log",
     "ЗакрытьTestClientПослеЗапускаСценариев": true,
-    "КаталогФич": "$workspaceRoot/features",
+    "КаталогФич": "*/features",
     "КаталогиБиблиотек": [
         "./tools/vanessa-automation/features/Libraries"
     ],
