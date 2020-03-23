@@ -5,7 +5,7 @@
     "ЗакрытьTestClientПослеЗапускаСценариев": true,
     "КаталогФич": "./features",
     "КаталогиБиблиотек": [
-        "./tools/vanessa-automation/features/lib"
+        "./tools/vanessa-automation/features/Libraries"
     ],
     "СписокТеговИсключение":[
         "IgnoreOnCIMainBuild",
