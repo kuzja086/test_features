@@ -1,20 +1,8 @@
-# language: ru
-# encoding: utf-8
-#parent uf:
-@UF2_запуск_сценариев_на_выполнение
-#parent ua:
-@UA13_управлять_Test_clients
+﻿# language: ru
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
-@IgnoreOn836
-@IgnoreOn837
-@IgnoreOn838
-@IgnoreOn839
-@IgnoreOn8310
-@IgnoreOn8311
-@IgnoreOn8312
 
 @tree
 
@@ -48,7 +36,7 @@
 			И Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
 			И Я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
 
-	И элемент формы с именем "Статистика" стал равен '1/2/25, 25/0/0'
+	И элемент формы с именем "Статистика" стал равен '1/2/24, 24/0/0'
 
 Сценарий: Активизация основного клиента
 	И я закрываю TestClient "TM_Толстый"

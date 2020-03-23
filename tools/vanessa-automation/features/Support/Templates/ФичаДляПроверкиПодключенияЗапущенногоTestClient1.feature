@@ -1,14 +1,9 @@
-# language: ru
-# encoding: utf-8
-#parent ua:
-@UA26_Макеты_для_проверки_test_client
-#parent uf:
-@UF9_Вспомогательные_фичи
+﻿# language: ru
 
 @IgnoreOnCIMainBuild
 @Тест
 
-Функциональность: ФичаДляПроверкиПодключенияЗапущенногоTestClient1
+Функциональность: ФичаДляПроверкиПодключенияЗапущенногоTestClient
  
 
 Сценарий: Для ФичаДляПроверкиПодключенияЗапущенногоTestClient

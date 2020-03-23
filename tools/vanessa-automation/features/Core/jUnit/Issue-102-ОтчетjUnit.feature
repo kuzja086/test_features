@@ -1,8 +1,4 @@
 # language: ru
-#parent uf:
-@UF5_формирование_результатов_выполнения_сценариев
-#parent ua:
-@UA21_формировать_отчет_jUnit
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds

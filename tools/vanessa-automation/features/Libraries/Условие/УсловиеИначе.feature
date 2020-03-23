@@ -1,9 +1,4 @@
-# language: ru
-# encoding: utf-8
-#parent uf:
-@UF8_Turbo_Gherkin
-#parent ua:
-@UA23_Использовать_условия_в_сценариях
+﻿# language: ru
 
 @IgnoreOnWeb
 @IgnoreOnOFBuilds
@@ -303,3 +298,4 @@
 		
 		
 	Тогда выражение внутреннего языка "Контекст.СлужебнаяПеременная = 3" Истинно	
+

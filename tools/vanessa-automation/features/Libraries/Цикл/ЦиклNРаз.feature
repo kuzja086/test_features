@@ -1,9 +1,4 @@
-# language: ru
-# encoding: utf-8
-#parent uf:
-@UF8_Turbo_Gherkin
-#parent ua:
-@UA22_Использовать_циклы_в_сценариях
+﻿# language: ru
 
 @IgnoreOnWeb
 @IgnoreOnOFBuilds
@@ -12,7 +7,7 @@
 @tree
 
 
-Функционал: Цикл N
+Функционал: Цикл
 	Как разработчик
 	Хочу иметь возможность использовать цикл по условию
 	Чтобы выполнять сложные бизнес-процессы

@@ -1,15 +1,11 @@
+﻿# encoding: utf-8
 # language: ru
-# encoding: utf-8
-#parent uf:
-@UF9_Вспомогательные_фичи
-#parent ua:
-@UA30_Прочие_макеты
 
 @tree
 @ExportScenarios
 @IgnoreOnCIMainBuild
 
-Функционал: Тест 2
+Функционал: Тест
 
 
 

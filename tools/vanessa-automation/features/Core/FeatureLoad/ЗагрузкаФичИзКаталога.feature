@@ -1,9 +1,4 @@
-# language: ru
-# encoding: utf-8
-#parent ua:
-@UA9_загружать_features
-#parent uf:
-@UF1_загрузка_и_обработка_features
+﻿# language: ru
 
 @IgnoreOnWeb
 
@@ -19,3 +14,4 @@
 	И я загрузил фичи из относительного каталога "features\Core\ExpectedSomething"
 	Тогда ДеревоТестов заполнилось строками из фичи
 	
+

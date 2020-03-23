@@ -1,9 +1,4 @@
-# language: ru
-# encoding: utf-8
-#parent ua:
-@UA10_генерировать_EPF_файлы
-#parent uf:
-@UF1_загрузка_и_обработка_features
+﻿# language: ru
 
 @IgnoreOnLinux
 @OneThread
@@ -34,3 +29,4 @@
 	И Пауза 10
 	Тогда я получил сгенерированный epf файл в ожидаемом каталоге
 	И сгенерированный epf прошел проверку на корректность после перегенерации issues232
+

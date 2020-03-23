@@ -1,9 +1,4 @@
 # language: ru
-# encoding: utf-8
-#parent ua:
-@UA27_Макеты_для_проверки_парсинга
-#parent uf:
-@UF9_Вспомогательные_фичи
 
 @tree
 @IgnoreOnCIMainBuild
@@ -17,3 +12,4 @@
 	* И группа 1
 	* И группа 2
 	* И группа 3
+

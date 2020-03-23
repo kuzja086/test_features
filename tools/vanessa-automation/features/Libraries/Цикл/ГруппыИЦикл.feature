@@ -1,9 +1,4 @@
-# language: ru
-# encoding: utf-8
-#parent uf:
-@UF8_Turbo_Gherkin
-#parent ua:
-@UA22_Использовать_циклы_в_сценариях
+﻿# language: ru
 
 @IgnoreOnOFBuilds
 @IgnoreOn82Builds
@@ -27,3 +22,4 @@
 	И Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
 	И Я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
 	Тогда в логе сообщений TestClient есть строка "ИмяПеременной = 2"
+

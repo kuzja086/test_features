@@ -1,9 +1,4 @@
-# language: ru
-# encoding: utf-8
-#parent ua:
-@UA32_Создание_фиче_файлов
-#parent uf:
-@UF3_формирование_features
+﻿# language: ru
 
 @IgnoreOnCIMainBuild
 

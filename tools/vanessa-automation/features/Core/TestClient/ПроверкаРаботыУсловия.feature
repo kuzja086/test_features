@@ -1,9 +1,4 @@
-# language: ru
-# encoding: utf-8
-#parent uf:
-@UF8_Turbo_Gherkin
-#parent ua:
-@UA23_Использовать_условия_в_сценариях
+﻿# language: ru
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
@@ -12,7 +7,7 @@
 @tree
 
 
-Функционал: Проверка работы условий базовая
+Функционал: Проверка работы условий
 
 
 

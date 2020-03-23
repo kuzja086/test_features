@@ -1,9 +1,4 @@
 # language: ru
-# encoding: utf-8
-#parent uf:
-@UF11_Прочее
-#parent ua:
-@UA44_Прочая_активность_по_проверке
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
@@ -49,4 +44,6 @@
 		| 'Затем количество файлов в каталоге "$КаталогПроекта$\tools\ScreenShotsTest" я запоминаю как "КоличествоФайлов"' | 'Success' |
 		| 'Тогда переменная "КоличествоФайлов" имеет значение 0'                                                           | 'Success' |
 		| 'И я сохраняю скриншот "$КаталогПроекта$\tools\ScreenShotsTest\Test.png"'                                        | 'Success' |
+
+
 

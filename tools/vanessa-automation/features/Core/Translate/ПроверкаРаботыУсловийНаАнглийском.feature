@@ -1,8 +1,4 @@
 # language: ru
-#parent uf:
-@UF8_Turbo_Gherkin
-#parent ua:
-@UA23_Использовать_условия_в_сценариях
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
@@ -34,3 +30,4 @@
 	
 	И у элемента с именем "Статистика" я жду значения "1/2/6, 6/0/0" в течение 50 секунд
 	
+

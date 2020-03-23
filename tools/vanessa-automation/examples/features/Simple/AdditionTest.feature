@@ -1,8 +1,4 @@
 # language: ru
-#parent uf:
-@UF11_Прочее
-#parent ua:
-@UA44_Прочая_активность_по_проверке
 
 
 @[ИмяФичи]=AdditionTest;\features\SelfTests
