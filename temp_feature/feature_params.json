@@ -3,5 +3,31 @@
   "ProcessFolder": "U:\\Козинский\\Git\\erp_features\\erp_features\\temp_feature",
   "ModelDBSettings": "U:\\Козинский\\Git\\erp_features\\erp_features\\temp_feature\\bases.yaml",
   "LogFile": "U:\\Козинский\\Git\\erp_features\\erp_features\\temp_feature\\feature_log.txt",
-  "FeatureFolder": "U:\\Козинский\\Git\\erp_features\\erp_features\\features"
+  "FeatureFolder": "U:\\Козинский\\Git\\erp_features\\erp_features\\features",
+  "КлиентТестирования": {
+		"ЗапускатьКлиентТестированияСМаксимизированнымОкном": false,
+		"ТаймаутЗапуска1С": 25,
+		"ДиапазонПортовTestclient": "",
+		"ЗапускатьТестКлиентВРежимеОтладки": false,
+		"КлючиОтладки": "",
+		"АдресОтладчика": "",
+		"ДанныеКлиентовТестирования": [
+			{
+				"Имя": "Мастер. База: Srvr=\"sqlserver:2441\";Ref=\"pb_test\"",
+				"ПутьКИнфобазе": "Srvr=\"sqlserver:2441\";Ref=\"test_pb_test\"",
+				"ПортЗапускаТестКлиента": 48001,
+				"ДопПараметры": "/N\"Мастер\" /P\"\"",
+				"ТипКлиента": "Тонкий",
+				"ИмяКомпьютера": "localhost"
+			},
+			{
+				"Имя": "Менеджеры. База: Srvr=\"sqlserver:2441\";Ref=\"pb_test\"",
+				"ПутьКИнфобазе": "Srvr=\"sqlserver:2441\";Ref=\"test_pb_test\"",
+				"ПортЗапускаТестКлиента": 48100,
+				"ДопПараметры": "/N\"Менеджеры\" /P\"\"",
+				"ТипКлиента": "Тонкий",
+				"ИмяКомпьютера": "localhost"
+			}
+		]
+	}
 }
