@@ -4,9 +4,6 @@
     "ВыводитьСообщенияВФайл": "$workspaceRoot/build/out/vb.log",
     "ЗакрытьTestClientПослеЗапускаСценариев": true,
     "КаталогФич": "./features",
-   // "КаталогиБиблиотек": [
-   //     "$workspaceRoot/tools/vanessa-automation/features/Libraries"
-    //],
     "СписокТеговИсключение":[
         "IgnoreOnCIMainBuild",
         "Draft"
