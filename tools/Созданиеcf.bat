@@ -1,0 +1,1 @@
+runner compile --src "P:\Козинский\Files" --out P:\Козинский\Files\1cv8.cf --ibconnection /S"sqlserver:2441\test_pb_test" --db-user Администратор --db-pwd 1 --v8version 8.3.14.1779 --debuglogfile P:\Козинский\Files\log.txt
