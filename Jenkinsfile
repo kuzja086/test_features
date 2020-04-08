@@ -60,7 +60,7 @@ pipeline {
                         testbase = null
 						temppath = temppath.isEmpty() ? "C:\temp" : temppath
 
-                        projectHelpers.registerComponent()
+                        //projectHelpers.registerComponent()
                         // создаем пустые каталоги
                         dir ('build') {
                             writeFile file:'dummy', text:''
