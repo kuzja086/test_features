@@ -2,4 +2,4 @@
 
 testing(templatebases : "pb_edt",
         sqlCredentialsID : "SQL",
-        base1CCredentialID : "1CPB")
+        base1CCredentialID : "PB1C")
