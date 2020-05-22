@@ -9,7 +9,7 @@
             "type": "oscript",
             "request": "launch",
             "program": "${file}",
-            "args": [],
+            "args": ["-srv","sqlserver:2440", "-platformversion", "8.3.14.1779", "-basename", "test_pb_test", "-usr", "Администратор", "-pwd", "1"],
             "cwd": "${workspaceRoot}",
             "runtimeExecutable": null,
             "debugPort": 2801,
